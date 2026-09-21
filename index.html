@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doppy Todo para la salud de tu mascota, conectado</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <img src="assets/Type 2.png" alt="Doppy Logo" width="150" height="150">
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#como-funciona">Features</a></li>
+    <li><a href="#caracteristicas">Solutions</a></li>
+    <li><a href="#planes">Pricing</a></li>
+    <li><a href="#">Resources</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="typeofuser.html" class="btn-ghost" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">Login</a>
+    <a href="signupdu.html" class="btn-yellow" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">Start free</a>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text fade-in">
+    <h1><span class="doppy-blue">Doppy</span><br>Your pet's best care<br><span class="doppy-yellow">Anytime, anywhere</span></h1>
+    <p>Doppy is the platform that connects veterinary clinics and pet owners to manage medical records, appointments, vaccinations, and more</p> 
+  </div>
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section class="how" id="como-funciona">
+  <h2 class="section-title">How It Works</h2>
+  <div class="how-grid">
+    <div class="how-card blue-bg fade-in">
+      <div class="how-card-header">
+        <div class="how-card-icon"></div>
+        <div>
+          <h3>For Veterinary Clinics</h3>
+          <p>Manage your clinic efficiently and simply </p>
+        </div>
+      </div>
+      <ul class="how-steps">
+        <li class="how-step">
+          <div class="step-num">1</div>
+          <div class="step-text">
+            <strong>Create Your Account</strong>
+            <span>Register your clinic and get started in minutes.</span>
+          </div>
+        </li>
+        <li class="how-step">
+          <div class="step-num">2</div>
+          <div class="step-text">
+            <strong>Generate Secure Codes</strong>
+            <span>Create unique codes with your brand identity.</span>
+          </div>
+        </li>
+        <li class="how-step">
+          <div class="step-num">3</div>
+          <div class="step-text">
+            <strong>Manage Everything Digitally</strong>
+            <span>Access medical histories, appointments, vaccinations and more from a single location.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="how-card yellow-bg fade-in">
+      <div class="how-card-header">
+        <div class="how-card-icon"></div>
+        <div>
+          <h3>For Pet Owners</h3>
+          <p>All the information about your pet in one place</p>
+        </div>
+      </div>
+      <ul class="how-steps">
+        <li class="how-step">
+          <div class="step-num">1</div>
+          <div class="step-text">
+            <strong>Create Your Account</strong>
+            <span>Download the app or register on the website in seconds.</span>
+          </div>
+        </li>
+        <li class="how-step">
+          <div class="step-num">2</div>
+          <div class="step-text">
+            <strong>Enter Your Code</strong>
+            <span>Enter the affiliation code of your veterinary clinic.</span>
+          </div>
+        </li>
+        <li class="how-step">
+          <div class="step-num">3</div>
+          <div class="step-text">
+            <strong>Access Your Pet's History</strong>
+            <span>View information, vaccinations, appointments and more in real-time.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="caracteristicas">
+  <h2 class="section-title">Everything You Need, in One Place</h2>
+  <div class="features-grid">
+
+    <!-- Historiales -->
+    <div class="feature-card fade-in">
+      <div class="feature-icon"></div>
+      <h4>Digital Medical Records</h4>
+      <p>Store treatment histories, diagnoses, and more in one secure location.</p>
+      <div class="feature-mini-ui">
+        <ul class="mini-list">
+          <li><div class="mini-dot dot-blue"></div> Diagnoses</li>
+          <li><div class="mini-dot dot-green"></div> Surgeries</li>
+          <li><div class="mini-dot dot-yellow"></div> Exams</li>
+          <li><div class="mini-dot dot-red"></div> Treatments</li>
+          <li><div class="mini-dot dot-blue"></div> Prescriptions</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Vacunas -->
+    <div class="feature-card fade-in">
+      <div class="feature-icon"></div>
+      <h4>Vaccine Management</h4>
+      <p>Keep track of vaccinations and receive automatic reminders.</p>
+      <div class="feature-mini-ui">
+        <ul class="mini-list">
+          <li><div class="mini-dot dot-green"></div> - Rabies — 01/05/2024</li>
+          <li><div class="mini-dot dot-green"></div> - 5-in-1 (DHPP) — 01/12/2024</li>
+          <li><div class="mini-dot dot-red"></div> - Bordetella — Pending</li>
+          <li><div class="mini-dot dot-yellow"></div> - Influenza — Upcoming</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Citas -->
+    <div class="feature-card fade-in">
+      <div class="feature-icon"></div>
+      <h4>Appointment Management</h4>
+      <p>Schedule and manage appointments quickly and accurately.</p>
+      <div class="feature-mini-ui mini-calendar">
+        <div class="cal-header"><span>Mayo 2025</span><span></span></div>
+        <div class="cal-grid">
+          <div class="cal-day header">L</div><div class="cal-day header">M</div>
+          <div class="cal-day header">X</div><div class="cal-day header">J</div>
+          <div class="cal-day header">V</div><div class="cal-day header">S</div>
+          <div class="cal-day header">D</div>
+          <div class="cal-day"></div><div class="cal-day"></div>
+          <div class="cal-day has-event">1</div><div class="cal-day">2</div>
+          <div class="cal-day has-event">3</div><div class="cal-day">4</div>
+          <div class="cal-day">5</div><div class="cal-day has-event">6</div>
+          <div class="cal-day">7</div><div class="cal-day highlight">8</div>
+          <div class="cal-day">9</div><div class="cal-day has-event">10</div>
+          <div class="cal-day">11</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat -->
+    <div class="feature-card fade-in">
+      <div class="feature-icon"></div>
+      <h4>Secure Communication</h4>
+      <p>Chat and share information with your clients.</p>
+      <div class="feature-mini-ui">
+        <div class="mini-chat">
+          <div class="chat-msg">
+            <div class="chat-bubble">Max's results are ready!</div>
+          </div>
+          <div class="chat-msg sent">
+            <div class="chat-bubble">Thank you, Dr.! I'll review them.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recordatorios -->
+    <div class="feature-card fade-in">
+      <div class="feature-icon"></div>
+      <h4>Automatic Reminders</h4>
+      <p>Get notified about appointments, vaccines, and treatments without any effort.</p>
+      <div class="feature-mini-ui">
+        <div class="mini-reminder">
+          <div class="reminder-item">
+            <span class="reminder-icon"></span>
+            <div>Vacuna de Max — 26/05/2025</div>
+          </div>
+          <div class="reminder-item">
+            <span class="reminder-icon"></span>
+            <div>Cita con la doctora — 24/05/2025</div>
+          </div>
+          <div class="reminder-item">
+            <span class="reminder-icon"></span>
+            <div>Desparasitación — 31/05/2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Documentos -->
+    <div class="feature-card fade-in">
+      <div class="feature-icon"></div>
+      <h4>Document Management</h4>
+      <p>Store and share important documents securely.</p>
+      <div class="feature-mini-ui">
+        <div class="mini-doc">
+          <div class="doc-item">Radiografy.pdf</div>
+          <div class="doc-item">Bloodtest.pdf</div>
+          <div class="doc-item">Appointment.pdf</div>
+          <div class="doc-item">Antibiotic.pdf</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="dashboard-section">
+  <div class="text-side fade-in">
+    <h2>A dashboard designed for modern veterinarians</h2>
+    <p style="color: var(--muted); font-size: 0.95rem;">View all the important information about your clinic at a glance and make better decisions.</p>
+    <ul class="check-list">
+      <li>Schedule</li>
+      <li>Patients and appointments</li>
+      <li>Important reminders</li>
+      <li> Clinic statistics</li>
+    </ul>
+    <button class="btn-blue">Explore dashboard</button>
+  </div>
+  <div class="dashboard-mock-big fade-in">
+    <div class="dash-topbar">
+      <span>Main panel</span>
+      <strong>🐾 Dra. Valentina P.</strong>
+    </div>
+    <div class="dash-body">
+      <div class="dash-kpis">
+        <div class="kpi"><div class="kpi-num">12</div><div class="kpi-label">Today's appointments</div></div>
+        <div class="kpi"><div class="kpi-num">236</div><div class="kpi-label">Patients</div></div>
+        <div class="kpi"><div class="kpi-num">18</div><div class="kpi-label">Upcoming vaccines</div></div>
+      </div>
+      <div class="dash-bottom">
+        <div class="dash-chart">
+          <div class="dash-chart-title">Patients by species</div>
+          <div class="chart-bars" id="chartBars">
+            <div class="bar" style="height: 40%"></div>
+            <div class="bar active" style="height: 70%"></div>
+            <div class="bar" style="height: 55%"></div>
+            <div class="bar" style="height: 90%"></div>
+            <div class="bar active" style="height: 65%"></div>
+            <div class="bar" style="height: 45%"></div>
+            <div class="bar" style="height: 80%"></div>
+          </div>
+        </div>
+        <div class="dash-activity">
+          <div class="dash-chart-title">Recent Activity</div>
+          <div class="activity-item">
+            <div class="activity-dot" style="background: var(--blue)"></div>
+            <div>New patient: Mía</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot" style="background: var(--yellow-dark)"></div>
+            <div>Vaccine applied to Luna</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot" style="background: #10B981"></div>
+            <div>Appointment completed — Max</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot" style="background: #EF4444"></div>
+            <div>Document uploaded</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOBILE APP -->
+<section class="app-section">
+  <div class="phones-wrap fade-in">
+    <div class="phone-card">
+      <div class="phone-screen-inner">
+        <div class="ps-header">
+          <span class="ps-name">Doppy</span>
+          <span class="ps-time">9:41</span>
+        </div>
+        <div class="ps-card">
+          <div class="ps-card-title">Max</div>
+          <div class="ps-card-sub">Golden Retriever · 3 years</div>
+        </div>
+        <div class="ps-card">
+          <div class="ps-card-title">Upcoming appointment</div>
+          <div class="ps-card-sub">Monday 26 · 10:30 am</div>
+        </div>
+        <div class="ps-card">
+          <div class="ps-card-title">Rabies vaccine<span class="badge-green">Up to date</span></div>
+          <div class="ps-card-sub">Valid until Dec 2025</div>
+        </div>
+      </div>
+    </div>
+    <div class="phone-card">
+      <div class="phone-screen-inner">
+        <div class="ps-header">
+          <span class="ps-name">Doppy</span>
+          <span class="ps-time">9:41</span>
+        </div>
+        <div class="ps-card">
+          <div class="ps-card-title">General check-up</div>
+          <div class="ps-card-sub">May 24th · 10:30 - 11:00</div>
+        </div>
+        <div class="ps-card">
+          <div class="ps-card-title">Blood test</div>
+          <div class="ps-card-sub">View results</div>
+        </div>
+        <div class="ps-card">
+          <div class="ps-card-title">Vaccination</div>
+          <div class="ps-card-sub"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-side fade-in">
+    <h2>Your pets, always with you</h2>
+    <p style="color: var(--muted); font-size: 0.95rem; margin-bottom: 16px;">The app for pet owners keeps you informed and connected with your veterinary clinic.</p>
+    <ul class="check-list">
+      <li>Complete medical history</li>
+      <li>Vaccine card</li>
+      <li>Upcoming appointments</li>
+      <li>Important documents</li>
+      <li>Messages with your veterinarian</li>
+    </ul>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="planes">
+  <h2 class="section-title">Choose the ideal plan for your clinic</h2>
+  <div class="pricing-grid">
+
+    <div class="price-card fade-in">
+      <div class="plan-name">Doppy Light</div>
+      <div class="plan-desc">Ideal for small clinics</div>
+      <div class="plan-price">
+        <span class="currency"></span><span class="amount"></span>
+        <span class="period">USD/month</span>
+      </div>
+      <ul class="plan-features">
+        
+        <li><span class="check">✓</span> medical history</li>
+        <li><span class="check">✓</span> Vaccine control</li>
+        <li><span class="check">✓</span> Appointments and reminders</li>
+        <li><span class="check">✓</span> Email support</li>
+      </ul>
+      <button class="btn-plan secondary">Start now</button>
+    </div>
+
+    <div class="price-card popular fade-in">
+      <div class="popular-badge">Most popular</div>
+      <div class="plan-name">Doppy Jumbo</div>
+      <div class="plan-desc">For growing vets</div>
+      <div class="plan-price">
+        <span class="currency">
+        </span><span class="amount"></span>
+        <span class="period">USD/month</span>
+      </div>
+      <ul class="plan-features">
+        <li><span class="check">✓</span>everything in Light</li>
+        <li><span class="check">✓</span>advanced reporting</li>
+        <li><span class="check">✓</span>document management</li>
+        <li><span class="check">✓</span>SMS reminders</li>
+        <li><span class="check">✓</span>Priority support</li>
+      </ul>
+      <button class="btn-plan primary">Start now</button>
+    </div>
+
+    <div class="price-card fade-in">
+      <div class="plan-name">Doppy Tailored</div>
+      <div class="plan-desc">Personalized solution for growing practices</div>
+      <div class="plan-price">
+        <span class="custom">Custom quote</span>
+      </div>
+      <ul class="plan-features">
+        <li><span class="check">✓</span>everything in Jumbo</li>
+        <li><span class="check">✓</span>unlimited locations</li>
+        <li><span class="check">✓</span>custom integrations</li>
+        <li><span class="check">✓</span>custom onboarding</li>
+        <li><span class="check">✓</span>dedicated support</li>
+      </ul>
+      <button class="btn-plan outline">Talk to sales</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Ready to transform your clinic?</h2>
+
+  <p>Join hundreds of veterinarians who already use Doppy to provide better care for their pets.</p>
+  <div class="cta-buttons">
+    <button class="btn-white" style="color: #087cbf;">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+        <img src="assets/Type 2.png" alt="Doppy Logo" width="200" height="200" class="logo">
+      <div class="social-row">
+        <a class="social-btn" href="https://instagram.com/Doppyofficial" target="_blank" rel="noopener" aria-label="Instagram: @Doppyofficial" title="@Doppyofficial">📷</a>
+        <a class="social-btn" href="mailto:Doppybussines@outlook.com" aria-label="Email: Doppybussines@outlook.com" title="Doppybussines@outlook.com">✉</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Product</h5>
+      <ul>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Doppy for Veterinarians</a></li>
+        <li><a href="#">Doppy for Pet Owners</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Guides</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Privacy & Security</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Doppy. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

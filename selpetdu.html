@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doppy — Elige el tipo de mascota</title>
+<link rel="stylesheet" href="selpetdu.css">
+</head>
+<body>
+
+<div class="wizard">
+
+  <!-- ===== PANEL IZQUIERDO ===== -->
+  <aside class="side-panel">
+    <div class="logo">
+     <img src="assets/Type 2.png" alt="Doppy Logo" width="250" height="250">
+    </div>
+
+    <div class="side-heading">
+      <h1>Let's add your pet to the <span class="highlight">Doppy</span> family</h1>
+      <p class="side-sub">Tell us a bit about your pet so we can help you take the best care of them.</p>
+    </div>
+
+    <ul class="benefits">
+      <li>
+        <span class="benefit-icon icon-blue">🐾</span>
+        <div>
+          <strong>Personalized care</strong>
+          <p>Get reminders, tips and recommendations tailored to your pet.</p>
+        </div>
+      </li>
+      <li>
+        <span class="benefit-icon icon-green">📅</span>
+        <div>
+          <strong>Health tracking</strong>
+          <p>Keep track of vaccines, visits and important details.</p>
+        </div>
+      </li>
+      <li>
+        <span class="benefit-icon icon-yellow">👥</span>
+        <div>
+          <strong>All in one place</strong>
+          <p>Manage everything about your pet easily and securely.</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="side-illustration" aria-hidden="true">
+      <div class="illustration-blob"></div>
+      <span class="pet-emoji dog-emoji">🐶</span>
+      <span class="pet-emoji cat-emoji">🐱</span>
+    </div>
+  </aside>
+
+  <!-- ===== PANEL DERECHO ===== -->
+  <main class="main-panel">
+
+    <div class="top-bar">
+      <button class="back-btn" type="button" id="backBtn">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6"></path>
+        </svg>
+        <span>Back</span>
+      </button>
+
+      <ol class="stepper">
+        <li class="step active" data-step="1">
+          <span class="step-circle">1</span>
+          <span class="step-label">Pet Type</span>
+        </li>
+        <li class="step" data-step="2">
+          <span class="step-circle">2</span>
+          <span class="step-label">Basic Info</span>
+        </li>
+      </ol>
+
+      <button class="help-btn" type="button">
+        <span>?</span> Need help?
+      </button>
+    </div>
+
+    <h2 class="title">Choose your <span class="highlight">pet's</span> type </h2>
+    <p class="subtitle">This helps us provide the best experience for you and your pet.</p>
+
+    <form id="petTypeForm">
+      <div class="pet-grid">
+
+        <label class="pet-card" data-pet="dog">
+          <input type="radio" name="petType" value="dog" checked>
+          <span class="pet-visual visual-dog"> <img src="assets/dogd.png" alt="Dog" height="120" width="120"></span>
+          <span class="pet-name">Dog</span>
+          <span class="pet-desc">Loyal, active and full of love.</span>
+          <span class="pet-radio"></span>
+        </label>
+
+        <label class="pet-card" data-pet="cat">
+          <input type="radio" name="petType" value="cat">
+          <span class="pet-visual visual-cat"> <img src="assets/catd.png" alt="Cat" height="120" width="120"></span>
+          <span class="pet-name">Cat</span>
+          <span class="pet-desc">Independent, curious and incredibly special.</span>
+          <span class="pet-radio"></span>
+        </label>
+
+        <label class="pet-card" data-pet="bird">
+          <input type="radio" name="petType" value="bird">
+          <span class="pet-visual visual-bird"> <img src="assets/parrotd.png" alt="Bird" height="120" width="120"></span>
+          <span class="pet-name">Bird</span>
+          <span class="pet-desc">Colorful, cheerful and full of energy.</span>
+          <span class="pet-radio"></span>
+        </label>
+
+        <label class="pet-card" data-pet="turtle">
+          <input type="radio" name="petType" value="turtle">
+          <span class="pet-visual visual-turtle"> <img src="assets/turtled.png" alt="Turtle" height="120" width="120"></span>
+          <span class="pet-name">Turtle</span>
+          <span class="pet-desc">Calm, steady and fascinating.</span>
+          <span class="pet-radio"></span>
+        </label>
+
+        <label class="pet-card" data-pet="rabbit">
+          <input type="radio" name="petType" value="rabbit">
+          <span class="pet-visual visual-rabbit"> <img src="assets/rabitd.png" alt="Rabbit" height="120" width="120"></span>
+          <span class="pet-name">Rabbit</span>
+          <span class="pet-desc">Gentle, adorable and full of personality.</span>
+          <span class="pet-radio"></span>
+        </label>
+
+        <label class="pet-card" data-pet="lizard">
+          <input type="radio" name="petType" value="lizard">
+          <span class="pet-visual visual-lizard"> <img src="assets/lizardd.png" alt="Lizard" height="120" width="120"></span>
+          <span class="pet-name">Lizard</span>
+          <span class="pet-desc">Unique, cool and curious.</span>
+          <span class="pet-radio"></span>
+        </label>
+
+      </div>
+
+      <div class="security-banner">
+        <span class="shield-icon">🛡️</span>
+        <div>
+          <strong>Your pet's data is safe with us</strong>
+          <p>We use top security standards to keep their information protected.</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <span class="save-status" id="saveStatus"></span>
+        <button type="submit" class="next-btn" id="nextBtn">
+          <span id="nextBtnText">Next</span> <span class="arrow">→</span>
+        </button>
+      </div>
+    </form>
+
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="selpetdu.js"></script>
+</body>
+</html>
