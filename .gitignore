@@ -1,0 +1,7 @@
+# Claude Code (clo-author)
+.claude/settings.local.json
+.claude/state/*
+!.claude/state/*.example
+__pycache__/
+project_dashboard.html
+quality_reports/**/*.html
