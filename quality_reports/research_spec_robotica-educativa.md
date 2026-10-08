@@ -25,7 +25,7 @@ En los colegios privados de Panamá hay pocos kits de robótica para muchos estu
 
 ## 2. Motivación
 
-- MEDUCA reporta >1,300 docentes formados en STEAM y >1,000 clubes de robótica (2023). La formación existe; los **kits por estudiante** siguen siendo escasos (ej.: programa Cobre Panamá–FUNDESTEAM en 61 escuelas de Colón; cifra exacta de kits por verificar).
+- MEDUCA reporta >1,300 docentes formados en STEAM y >1,000 clubes de robótica (2023). La formación existe; los **kits por estudiante** siguen siendo escasos (ej.: programa Cobre Panamá–FUNDESTEAM: 80 kits para 61 escuelas de Colón hasta 2026).
 - El docente evalúa a 30 estudiantes a mano, sin datos.
 - Herramientas existentes (Scratch, mBlock, MakeCode, Open Roberta, VEXcode VR) no combinan: simulador + robot real por turnos + analítica docente + multi-colegio, en español y para Panamá.
 
@@ -92,7 +92,7 @@ En los colegios privados de Panamá hay pocos kits de robótica para muchos estu
 - Plataforma funcional desplegada en la nube.
 - Aumento del tiempo de práctica por estudiante (H1).
 - SUS ≥ 68 (H2).
-- ≥ 80% de retos transferibles del simulador al robot (H3).
+- ≥ 80% de retos transferibles del simulador al robot (H3). *Meta de diseño: la literatura no fija este umbral.*
 - **Sorpresa posible:** que el cuello de botella no sea el kit sino la formación docente → ajustar enfoque hacia guías y retos para el docente.
 
 ## 8. Contribución

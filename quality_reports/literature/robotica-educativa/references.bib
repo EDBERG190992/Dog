@@ -1,19 +1,19 @@
 % =====================================================================
-% references.bib — Proyecto: robotica-educativa
+% references.bib — Proyecto: robotica-educativa (ronda 2)
 % Tesis de desarrollo (pregrado), Universidad de Panamá
 % Generado por: librarian, 2026-10-08
 % Convenciones:
-%   "% UNVERIFIED"  -> algún campo (autor, año, título o venue) no se
-%                      pudo confirmar en una fuente real.
-%   "% DOI no verificado directamente" -> DOI tomado de listas de
-%                      referencias o construido a partir de vol/núm/art.
-%   Cuando la fuente solo daba iniciales, se usan iniciales (no se
-%   inventan nombres de pila).
+%   "% UNVERIFIED (...)"  -> autor/año/título/venue no confirmado en fuente real.
+%   "% DOI/TITULO NO VERIFICADO DIRECTAMENTE" -> referencia confirmada, pero
+%       el DOI fue construido o tomado de terceros, o el título se infirió
+%       de la URL.
+%   Si la fuente solo daba iniciales, se usan iniciales; si solo daba
+%   apellidos, se usan solo apellidos (no se inventan nombres de pila).
 % Compatible con biblatex + biber.
 % =====================================================================
 
 % ---------------------------------------------------------------------
-% Eje 1 — Efecto de la robótica educativa
+% Eje 1 — Efecto de la robótica educativa y pensamiento computacional
 % ---------------------------------------------------------------------
 
 @book{papert1980mindstorms,
@@ -36,25 +36,66 @@
   doi     = {10.1145/1118178.1118215}
 }
 
+@inproceedings{brennan2012new,
+  author    = {Brennan, Karen and Resnick, Mitchel},
+  title     = {New frameworks for studying and assessing the development of computational thinking},
+  booktitle = {Proceedings of the 2012 Annual Meeting of the American Educational Research Association},
+  address   = {Vancouver, Canada},
+  year      = {2012},
+  url       = {https://scratched.gse.harvard.edu/ct/files/AERA2012.pdf}
+}
+
+@article{grover2013computational,
+  author  = {Grover, Shuchi and Pea, Roy},
+  title   = {Computational Thinking in {K--12}: A Review of the State of the Field},
+  journal = {Educational Researcher},
+  volume  = {42},
+  number  = {1},
+  pages   = {38--43},
+  year    = {2013},
+  doi     = {10.3102/0013189X12463051}
+}
+
+@article{romangonzalez2017which,
+  author  = {Rom{\'a}n-Gonz{\'a}lez, M. and P{\'e}rez-Gonz{\'a}lez, J.-C. and Jim{\'e}nez-Fern{\'a}ndez, C.},
+  title   = {Which cognitive abilities underlie computational thinking? {Criterion} validity of the Computational Thinking Test},
+  journal = {Computers in Human Behavior},
+  volume  = {72},
+  pages   = {678--691},
+  year    = {2017},
+  doi     = {10.1016/j.chb.2016.08.047}
+}
+
+% UNVERIFIED (volumen y páginas): solo se halló la preprint; 22, 142-158 no confirmado
+@article{shute2017demystifying,
+  author  = {Shute, Valerie J. and Sun, Chen and Asbell-Clarke, Jodi},
+  title   = {Demystifying computational thinking},
+  journal = {Educational Research Review},
+  year    = {2017},
+  url     = {https://myweb.fsu.edu/vshute/pdf/CT.pdf}
+}
+
+% DOI/TITULO NO VERIFICADO DIRECTAMENTE: DOI no confirmado
 @article{benitti2012exploring,
-  author  = {Benitti, F. B. V.},
+  author  = {Benitti, Fabiane Barreto Vavassori},
   title   = {Exploring the educational potential of robotics in schools: A systematic review},
   journal = {Computers \& Education},
   volume  = {58},
   number  = {3},
   pages   = {978--988},
   year    = {2012},
-  doi     = {10.1016/j.compedu.2011.10.006} % DOI no verificado directamente (editor bloqueado)
+  doi     = {10.1016/j.compedu.2011.10.006}
 }
 
+% DOI/TITULO NO VERIFICADO DIRECTAMENTE: DOI no confirmado (vol/páginas vía DBLP)
 @article{xia2018systematic,
-  author  = {Xia, L. and Zhong, B.},
+  author  = {Xia, Liying and Zhong, Baichang},
   title   = {A systematic review on teaching and learning robotics content knowledge in {K-12}},
   journal = {Computers \& Education},
   volume  = {127},
   pages   = {267--282},
   year    = {2018},
-  doi     = {10.1016/j.compedu.2018.08.007} % DOI no verificado directamente
+  doi     = {10.1016/j.compedu.2018.08.007}
 }
 
 @article{anwar2019systematic,
@@ -68,7 +109,7 @@
   doi     = {10.7771/2157-9288.1223}
 }
 
-% UNVERIFIED: cuarto autor (y posteriores) no confirmado; se usa "and others"
+% UNVERIFIED (4.º autor y posteriores)
 @article{zhang2021educational,
   author  = {Zhang, Y. J. and Luo, R. H. and Zhu, Y. J. and others},
   title   = {Educational Robots Improve {K-12} Students' Computational Thinking and {STEM} Attitudes: Systematic Review},
@@ -98,6 +139,14 @@
   pages   = {e33249},
   year    = {2024},
   doi     = {10.1016/j.heliyon.2024.e33249}
+}
+
+@article{forsstrom2025metareview,
+  author  = {Forsstr{\"o}m, Sanna and Bond, Melissa and Nj{\aa}, Morten},
+  title   = {A meta-review of programming and robotics in schools},
+  journal = {Review of Education},
+  year    = {2025},
+  doi     = {10.1002/rev3.70231}
 }
 
 % ---------------------------------------------------------------------
@@ -183,12 +232,12 @@
   title     = {Comparison of {Blockly} vs {Arduino IDE} for programming education using {M5Stack Core2 ESP32} {IoT} Development Kit},
   booktitle = {AHFE Open Access},
   publisher = {AHFE International},
-  year      = {2022}, % año tomado de repositorio institucional, no de AHFE
+  year      = {2022}, % año tomado de repositorio institucional
   doi       = {10.54941/ahfe1001182}
 }
 
 % ---------------------------------------------------------------------
-% Eje 3 — Simuladores, transferencia simulador->robot, robots compartidos
+% Eje 3 — Simuladores, sim-to-real y robots compartidos
 % ---------------------------------------------------------------------
 
 @inproceedings{terzic2025educational,
@@ -220,6 +269,26 @@
   url         = {https://gsyc.urjc.es/jmplaza/students/tfg-kibotics-ruben_alvarez-2019.pdf}
 }
 
+@thesis{pulido2021integracion,
+  author      = {Pulido Millanes, Daniel},
+  title       = {Integraci{\'o}n del Robot {Lego Ev3} en una plataforma de Rob{\'o}tica Educativa},
+  type        = {Trabajo Fin de Grado (Grado en Ingenier{\'i}a Telem{\'a}tica)},
+  institution = {Universidad Rey Juan Carlos},
+  year        = {2021}, % curso 2020/2021
+  note        = {Tutor: Jos{\'e} Mar{\'i}a Ca{\~n}as Plaza. Plataforma Kibotics},
+  url         = {https://gsyc.urjc.es/jmplaza/students/tfg-kibotics-lego_ev3-daniel_pulido-2020.pdf}
+}
+
+@thesis{castrosanmartin2022ensenanza,
+  author      = {Castro San Mart{\'i}n, Luis},
+  title       = {Ense{\~n}anza de la Programaci{\'o}n y el Pensamiento Computacional con la Plataforma {Kibotics}},
+  type        = {Trabajo Fin de M{\'a}ster (M{\'a}ster en Formaci{\'o}n del Profesorado, especialidad Inform{\'a}tica y Tecnolog{\'i}a)},
+  institution = {Universidad Rey Juan Carlos},
+  year        = {2022}, % curso 2021-2022
+  note        = {Directora: Raquel Bel{\'e}n Hij{\'o}n Neira},
+  url         = {https://gsyc.urjc.es/jmplaza/kibotics/tfm-LuisCastroSanMartin-2022.pdf}
+}
+
 @inproceedings{jost2014graphical,
   author    = {Jost, Beate and Ketterl, Markus and Budde, Reinhard and Leimbach, Thorsten},
   title     = {Graphical Programming Environments for Educational Robots: {Open Roberta} -- Yet Another One?},
@@ -239,6 +308,16 @@
   doi     = {10.7146/lom.v8i14.22183}
 }
 
+@article{mondada2017bringing,
+  author  = {Mondada, Francesco and Bonani, Michael and Riedo, Fanny and Briod, Manon and Pereyre, L{\'e}a and R{\'e}tornaz, Philippe and Magnenat, St{\'e}phane},
+  title   = {Bringing Robotics to Formal Education: The {Thymio} Open-Source Hardware Robot},
+  journal = {IEEE Robotics \& Automation Magazine},
+  volume  = {24},
+  number  = {1},
+  pages   = {77--85},
+  year    = {2017}
+}
+
 @inproceedings{sirinterlikci2022learning,
   author    = {Sirinterlikci, Arif and McKenna, Jason and Lin, Yuhan and Oravec, Raina and Harter, Lauren},
   title     = {Learning Robot Programming Anywhere: {VEXcode VR}},
@@ -248,13 +327,14 @@
   url       = {https://peer.asee.org/41259}
 }
 
+% UNVERIFIED (año): inferido del volumen 28
 @article{parragonzalez2025vexcode,
   author  = {Parra-Gonz{\'a}lez, Ezra Federico and Cardona-Reyes, H{\'e}ctor and Murillo Alfaro, Ricardo},
   title   = {{VEXcode VR}: A Virtual Tool as Support in the Teaching of Analytical Geometry},
   journal = {CLEI Electronic Journal},
   volume  = {28},
   number  = {2},
-  year    = {2025}, % UNVERIFIED: año inferido del volumen
+  year    = {2025},
   doi     = {10.19153/cleiej.28.2.4}
 }
 
@@ -280,13 +360,15 @@
   doi     = {10.3390/s21124031}
 }
 
-% UNVERIFIED: venue (revista) no confirmado; solo se halló en tame.tlu.ee (feb. 2026)
-@misc{ztoupas2026simulators,
-  author       = {Ztoupas, Evangelos and Sapounidis, Theodosios and Tselegkaridis, Sokratis},
-  title        = {Simulators in Educational Robotics: A Systematic Review with Content Analysis},
-  year         = {2026},
-  howpublished = {Resumen publicado en tame.tlu.ee},
-  url          = {https://tame.tlu.ee/2026/02/09/simulators-in-educational-robotics-a-systematic-review-with-content-analysis/}
+@article{ztoupas2026simulators,
+  author  = {Ztoupas, Evangelos and Sapounidis, Theodosios and Tselegkaridis, Sokratis},
+  title   = {Simulators in Educational Robotics: A Systematic Review with Content Analysis},
+  journal = {Applied Sciences},
+  volume  = {16},
+  number  = {2},
+  pages   = {653},
+  year    = {2026},
+  doi     = {10.3390/app16020653}
 }
 
 @article{berland2015comparing,
@@ -299,7 +381,7 @@
   doi     = {10.1007/s10956-015-9552-x}
 }
 
-% UNVERIFIED: venue (Tech Directions) y año (2013) no confirmados
+% UNVERIFIED (venue y año): citado como Tech Directions 2013, no confirmado
 @misc{liu2013students,
   author       = {Liu, Allison and Newsom, Jeff and Schunn, Chris and Shoop, Robin},
   title        = {Students Learn Programming Faster through Robotic Simulation},
@@ -356,6 +438,56 @@
   doi       = {10.18260/1-2--45513}
 }
 
+@inproceedings{jakobi1995noise,
+  author    = {Jakobi, Nick and Husbands, Phil and Harvey, Inman},
+  title     = {Noise and the reality gap: The use of simulation in evolutionary robotics},
+  booktitle = {Advances in Artificial Life (ECAL 1995)},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {929},
+  publisher = {Springer},
+  pages     = {704--720},
+  year      = {1995},
+  doi       = {10.1007/3-540-59496-5_337}
+}
+
+@inproceedings{tobin2017domain,
+  author     = {Tobin, Josh and Fong, Rachel and Ray, Alex and Schneider, Jonas and Zaremba, Wojciech and Abbeel, Pieter},
+  title      = {Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World},
+  booktitle  = {2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year       = {2017},
+  eprint     = {1703.06907},
+  eprinttype = {arXiv},
+  url        = {https://ieeexplore.ieee.org/document/8202133}
+}
+
+@inproceedings{zhao2020simtoreal,
+  author    = {Zhao, Wenshuai and Pe{\~n}a Queralta, Jorge and Westerlund, Tomi},
+  title     = {Sim-to-Real Transfer in Deep Reinforcement Learning for Robotics: a Survey},
+  booktitle = {2020 IEEE Symposium Series on Computational Intelligence (SSCI)},
+  pages     = {737--744},
+  year      = {2020},
+  doi       = {10.1109/SSCI47803.2020.9308468}
+}
+
+@article{magnenat2011aseba,
+  author  = {Magnenat, St{\'e}phane and R{\'e}tornaz, Philippe and Bonani, Michael and Longchamp, Valentin and Mondada, Francesco},
+  title   = {{ASEBA}: A Modular Architecture for Event-Based Control of Complex Robots},
+  journal = {IEEE/ASME Transactions on Mechatronics},
+  year    = {2011},
+  doi     = {10.1109/TMECH.2010.2042722}
+}
+
+@article{michel2004webots,
+  author  = {Michel, Olivier},
+  title   = {{Webots}: Professional Mobile Robot Simulation},
+  journal = {International Journal of Advanced Robotic Systems},
+  volume  = {1},
+  number  = {1},
+  pages   = {39--42},
+  year    = {2004},
+  doi     = {10.5772/5618}
+}
+
 % ---------------------------------------------------------------------
 % Eje 4 — Robots de bajo costo (ESP32 / Arduino / MicroPython)
 % ---------------------------------------------------------------------
@@ -381,6 +513,14 @@
   doi       = {10.1007/978-3-030-67411-3_27}
 }
 
+@online{cnx2023unor4,
+  author  = {{CNX Software}},
+  title   = {Arduino {UNO R4} Minima and {WiFi} boards launched for \$20 and \$27.50},
+  date    = {2023-06-27},
+  url     = {https://cnx-software.com/2023/06/27/arduino-uno-r4-minima-and-wifi-boards},
+  urldate = {2026-10-08}
+}
+
 @inproceedings{armesto2023wireless,
   author    = {Armesto, Leopoldo and Blanc, Sara and Gonz{\'a}lez, Antonio and Sala, Antonio},
   title     = {Wireless Remote Control of Low-Cost Smart Devices for No-Coders},
@@ -391,15 +531,16 @@
   doi       = {10.5220/0012194600003543}
 }
 
+% DOI/TITULO NO VERIFICADO DIRECTAMENTE: DOI construido (coincide con URL MDPI 2079-9292/11/16/2606)
 @article{chronis2022fossbot,
-  author  = {Chronis, C. and Varlamis, I.},
+  author  = {Chronis, Christos and Varlamis, Iraklis},
   title   = {{FOSSBot}: An Open Source and Open Design Educational Robot},
   journal = {Electronics},
   volume  = {11},
   number  = {16},
   pages   = {2606},
   year    = {2022},
-  doi     = {10.3390/electronics11162606} % DOI construido a partir de vol/num/art; verificar
+  doi     = {10.3390/electronics11162606}
 }
 
 @article{chatzopoulos2022novel,
@@ -413,9 +554,9 @@
   doi     = {10.3390/educsci12040274}
 }
 
-% UNVERIFIED: año de publicación no confirmado (probablemente 2025 o posterior)
+% UNVERIFIED (año y nombre de pila; se usa inicial)
 @article{oberholster2025esp32,
-  author  = {Oberholster, Abrie},
+  author  = {Oberholster, A.},
   title   = {The {ESP32} Microcontroller as a Low-cost Teaching Tool for Mechatronics},
   journal = {IRSPBL},
   year    = {2025},
@@ -425,6 +566,17 @@
 % ---------------------------------------------------------------------
 % Eje 5 — Learning analytics y paneles docentes
 % ---------------------------------------------------------------------
+
+@article{verbert2013learning,
+  author  = {Verbert, Katrien and Duval, Erik and Klerkx, Joris and Govaerts, Sten and Santos, Jos{\'e} Luis},
+  title   = {Learning Analytics Dashboard Applications},
+  journal = {American Behavioral Scientist},
+  volume  = {57},
+  number  = {10},
+  pages   = {1500--1509},
+  year    = {2013},
+  doi     = {10.1177/0002764213479363}
+}
 
 @inproceedings{ihantola2015educational,
   author    = {Ihantola, Petri and others},
@@ -448,6 +600,17 @@
   doi     = {10.1109/TLT.2016.2599522}
 }
 
+% Nombres de pila no confirmados en la fuente: se usan solo apellidos
+@inproceedings{martinezmaldonado2013mtclassroom,
+  author    = {{Martinez-Maldonado} and Kay and Yacef and Edbauer and Dimitriadis},
+  title     = {{MTClassroom} and {MTDashboard}: Supporting Analysis of Teacher Attention in an Orchestrated Multi-Tabletop Classroom},
+  booktitle = {Computer-Supported Collaborative Learning Conference (CSCL 2013)},
+  volume    = {1},
+  pages     = {320--327},
+  year      = {2013}
+}
+
+% DOI/TITULO NO VERIFICADO DIRECTAMENTE: DOI no localizado
 @inproceedings{diana2017instructor,
   author    = {Diana, Nicholas and Eagle, Michael and Stamper, John and Grover, Shuchi and Bienkowski, Marie and Basu, Satabdi},
   title     = {An Instructor Dashboard for Real-Time Analytics in Interactive Programming Assignments},
@@ -466,6 +629,37 @@
   eid     = {14},
   year    = {2017},
   doi     = {10.1145/3105910}
+}
+
+@inproceedings{price2017isnap,
+  author    = {Price, Thomas W. and Dong, Yihuan and Lipovac, Dragan},
+  title     = {{iSnap}: Towards Intelligent Tutoring in Novice Programming Environments},
+  booktitle = {Proceedings of the 2017 ACM SIGCSE Technical Symposium on Computer Science Education},
+  publisher = {ACM},
+  pages     = {483--488},
+  year      = {2017},
+  doi       = {10.1145/3017680.3017762}
+}
+
+@inproceedings{holstein2018student,
+  author    = {Holstein, Kenneth and McLaren, Bruce M. and Aleven, Vincent},
+  title     = {Student Learning Benefits of a Mixed-Reality Teacher Awareness Tool in {AI}-Enhanced Classrooms},
+  booktitle = {Artificial Intelligence in Education (AIED 2018)},
+  publisher = {Springer},
+  year      = {2018},
+  doi       = {10.1007/978-3-319-93843-1_12}
+}
+
+% UNVERIFIED (año): repositorio OU indica sept. 2018; página del autor indica 2019.
+% Nombres de pila no confirmados: solo apellidos.
+@article{keuning2018systematic,
+  author  = {Keuning and Jeuring and Heeren},
+  title   = {A Systematic Literature Review of Automated Feedback Generation for Programming Exercises},
+  journal = {ACM Transactions on Computing Education},
+  volume  = {19},
+  number  = {1},
+  eid     = {3},
+  year    = {2018}
 }
 
 @article{morenoleon2015drscratch,
@@ -488,7 +682,18 @@
   doi     = {10.3389/frobt.2020.00021}
 }
 
-% UNVERIFIED: año no confirmado
+@incollection{cesaretti2021analysis,
+  author    = {Cesaretti, Lorenzo and Screpanti, Laura and Scaradozzi, David and Mangina, Eleni},
+  title     = {Analysis of Educational Robotics Activities Using a Machine Learning Approach},
+  booktitle = {Makers at School, Educational Robotics and Innovative Learning Environments},
+  volume    = {240},
+  publisher = {Springer},
+  pages     = {203--211},
+  year      = {2021},
+  doi       = {10.1007/978-3-030-77040-2_27}
+}
+
+% UNVERIFIED (año)
 @inproceedings{vazjunior2020scratchanalytics,
   author    = {Vaz Junior, Jorge Luis Nachtigall and Pernas, Ana Marilza and Primo, Tiago Thompsen},
   title     = {{ScratchAnalytics}: A Framework for Collecting and Analyzing Interactions in {Scratch} Projects},
@@ -535,7 +740,17 @@
   doi     = {10.48204/synergia.v5n1.9851}
 }
 
-% UNVERIFIED: año (inferido del volumen 10)
+@article{esquivel2025robotica,
+  author  = {Esquivel, Cindy and {\'A}vila, {\'A}ngel and Espinosa, Eliecer},
+  title   = {La rob{\'o}tica educativa: la inteligencia artificial, avances y desaf{\'i}os},
+  journal = {Acci{\'o}n y Reflexi{\'o}n Educativa},
+  number  = {51},
+  pages   = {255--274},
+  year    = {2025},
+  doi     = {10.48204/j.are.n51.a8863}
+}
+
+% UNVERIFIED (año): inferido del volumen 10
 @article{mesapinto2026didactica,
   author  = {Mesa Pinto, Fredy Humberto},
   title   = {Did{\'a}ctica de la rob{\'o}tica educativa en educaci{\'o}n b{\'a}sica secundaria},
@@ -546,13 +761,68 @@
   doi     = {10.37811/cl_rcm.v10i1.23362}
 }
 
-% UNVERIFIED: año (probablemente 2025 por DOI Zenodo)
+% UNVERIFIED (año): probablemente 2025 por DOI Zenodo
 @article{causilvillalba2025robotica,
   author  = {Causil Villalba, Robinson Daniel},
   title   = {Rob{\'o}tica educativa: una revisi{\'o}n sistem{\'a}tica de su progreso en Am{\'e}rica Latina en los {\'u}ltimos a{\~n}os},
   journal = {Punto Educativo},
   year    = {2025},
   doi     = {10.5281/zenodo.17437190}
+}
+
+% DOI/TITULO NO VERIFICADO DIRECTAMENTE: título inferido de la URL
+@online{telemetro2023meduca,
+  author  = {{Telemetro}},
+  title   = {{MEDUCA} inicia conteo regresivo para la Olimpiada Mundial de Rob{\'o}tica},
+  date    = {2023-10-15},
+  url     = {https://www.telemetro.com/nacionales/meduca-inicia-conteo-regresivo-la-olimpiada-mundial-robotica-n5931970},
+  urldate = {2026-10-08}
+}
+
+% DOI/TITULO NO VERIFICADO DIRECTAMENTE: título inferido de la URL
+@online{telemetro2023kits,
+  author  = {{Telemetro}},
+  title   = {Entregan kits de rob{\'o}tica a docentes de colegios oficiales},
+  date    = {2023-05-13},
+  url     = {https://www.telemetro.com/nacionales/entregan-kits-robotica-docentes-colegios-oficiales-n5880438},
+  urldate = {2026-10-08}
+}
+
+% Título descriptivo (no es el titular literal de la nota)
+@online{cobrepanama2023robotica,
+  author  = {{Cobre Panam{\'a}}},
+  title   = {Programa ``Rob{\'o}tica para la Movilidad Social'' (Cobre Panam{\'a} y FUNDESTEAM)},
+  year    = {2023},
+  url     = {https://cobrepanama.com/descargar/nota/380},
+  urldate = {2026-10-08},
+  note    = {Nota de prensa corporativa. 61 escuelas de Donoso y Omar Torrijos; 80 kits hasta 2026}
+}
+
+@online{laestrella2022robotica,
+  author  = {{La Estrella de Panam{\'a}}},
+  title   = {La Rob{\'o}tica educativa avanza con buenos pasos, sigue ganando terreno en Panam{\'a}},
+  date    = {2022-09-25},
+  url     = {https://www.laestrella.com.pa/panama/nacional/robotica-educativa-buenos-pasos-sigue-ganando-terreno-panama-LKLE478289},
+  urldate = {2026-10-08}
+}
+
+@online{dplnews2024senacyt,
+  author  = {{DPL News}},
+  title   = {Panam{\'a}: estudiantes de Col{\'o}n participaron en el cierre del proyecto de rob{\'o}tica educativa ``Aprendiendo con Blue-Bot y Rugged Robot 2024''},
+  year    = {2024},
+  url     = {https://dplnews.com/panama-estudiantes-de-colon-participaron-en-el-cierre-del-proyecto-de-robotica-educativa-aprendiendo-con-blue-bot-y-rugged-robot-2024/},
+  urldate = {2026-10-08},
+  note    = {Proyecto de SENACYT}
+}
+
+% UNVERIFIED (año de la nota): se infiere 2024 por la Olimpiada Mundial de Robótica 2024
+@online{laestrella2024fundesteam,
+  author  = {{La Estrella de Panam{\'a}}},
+  title   = {Fundesteam catapulta a Panam{\'a} al cuarto lugar mundial en Olimpiadas de Rob{\'o}tica},
+  year    = {2024},
+  url     = {https://www.laestrella.com.pa/panama/nacional/fundesteam-catapulta-a-panama-al-cuarto-lugar-mundial-en-olimpiadas-de-robotica-XY9472536},
+  urldate = {2026-10-08},
+  note    = {Nota sobre FUNDESTEAM (1.041 equipos panameños)}
 }
 
 @article{guerrerotamara2022nivel,
@@ -577,21 +847,32 @@
   doi     = {10.21703/rexe.Especial3201871826}
 }
 
-% Literatura gris: títulos aproximados a partir de la URL (no se abrió la nota)
-@online{telemetro2023meduca,
-  author  = {{Telemetro}},
-  title   = {{MEDUCA} inicia conteo regresivo para la Olimpiada Mundial de Rob{\'o}tica},
-  date    = {2023-10-15},
-  url     = {https://www.telemetro.com/nacionales/meduca-inicia-conteo-regresivo-la-olimpiada-mundial-robotica-n5931970},
+@article{castrorojas2012propuesta,
+  author  = {Castro Rojas, Mar{\'i}a Dolores and Acu{\~n}a Z{\'u}{\~n}iga, Ana Lourdes},
+  title   = {Propuesta comunitaria con rob{\'o}tica educativa: valoraci{\'o}n y resultados de aprendizaje},
+  journal = {Teor{\'i}a de la Educaci{\'o}n. Educaci{\'o}n y Cultura en la Sociedad de la Informaci{\'o}n (TESI)},
+  volume  = {13},
+  number  = {2},
+  pages   = {91--119},
+  year    = {2012},
+  url     = {https://kerwa.ucr.ac.cr/handle/10669/85980}
+}
+
+@online{delfino2023pronie,
+  author  = {{Delfino.cr}},
+  title   = {Flacso: evaluaci{\'o}n realizada no solicit{\'o} ni sugiri{\'o} el cierre del Pronie},
+  date    = {2023-04},
+  url     = {https://www.delfino.cr/2023/04/flacso-evaluacion-realizada-no-solicito-ni-sugirio-el-cierre-del-pronie},
   urldate = {2026-10-08}
 }
 
-@online{telemetro2023kits,
-  author  = {{Telemetro}},
-  title   = {Entregan kits de rob{\'o}tica a docentes de colegios oficiales},
-  date    = {2023-05-13},
-  url     = {https://www.telemetro.com/nacionales/entregan-kits-robotica-docentes-colegios-oficiales-n5880438},
-  urldate = {2026-10-08}
+% UNVERIFIED (fecha de la nota); título aproximado a partir de la URL
+@online{gubuy_ceibal_robotica,
+  author  = {{Presidencia de la Rep{\'u}blica Oriental del Uruguay}},
+  title   = {Programas J{\'o}venes a Programar, rob{\'o}tica y ense{\~n}anza de ingl{\'e}s, destacados en balance (Plan Ceibal)},
+  url     = {https://www.gub.uy/presidencia/comunicacion/noticias/programas-jovenes-programar-robotica-ensenanza-ingles-destacados-balance},
+  urldate = {2026-10-08},
+  note    = {5.300 kits de rob{\'o}tica distribuidos}
 }
 
 % ---------------------------------------------------------------------
@@ -672,6 +953,23 @@
   year    = {2009}
 }
 
+@book{sauro2011practical,
+  author    = {Sauro, Jeff},
+  title     = {A Practical Guide to the System Usability Scale ({SUS}): Background, Benchmarks \& Best Practices},
+  publisher = {Measuring Usability LLC},
+  address   = {Denver, CO},
+  year      = {2011}
+}
+
+@book{sauro2016quantifying,
+  author    = {Sauro, Jeff and Lewis, James R.},
+  title     = {Quantifying the User Experience: Practical Statistics for User Research},
+  edition   = {2},
+  publisher = {Morgan Kaufmann},
+  year      = {2016},
+  isbn      = {9780128023082}
+}
+
 @article{lewis2018system,
   author  = {Lewis, James R.},
   title   = {The System Usability Scale: Past, Present, and Future},
@@ -683,6 +981,17 @@
   doi     = {10.1080/10447318.2018.1455307}
 }
 
+@article{sevillagonzalez2020spanish,
+  author  = {Sevilla-Gonzalez, Magdalena Del Rocio and Moreno Loaeza, Lizbeth and Lazaro-Carrera, Laura Sofia and Bourguet Ramirez, Brigette and V{\'a}zquez Rodr{\'i}guez, Anabel and Peralta-Pedrero, Mar{\'i}a Luisa and Almeda-Valdes, Paloma},
+  title   = {Spanish Version of the System Usability Scale for the Assessment of Electronic Tools: Development and Validation},
+  journal = {JMIR Human Factors},
+  volume  = {7},
+  number  = {4},
+  pages   = {e21161},
+  year    = {2020},
+  doi     = {10.2196/21161}
+}
+
 @inproceedings{putnam2020adaptation,
   author    = {Putnam, Cynthia and Puthenmadom, Melisa and Cuerdo, Marjorie Ann and Wang, Wanshu and Paul, Nathaniel},
   title     = {Adaptation of the System Usability Scale for User Testing with Children},
@@ -690,4 +999,88 @@
   publisher = {ACM},
   year      = {2020},
   doi       = {10.1145/3334480.3382840}
+}
+
+% ---------------------------------------------------------------------
+% Eje 9 — Metodología de la tesis de desarrollo
+% ---------------------------------------------------------------------
+
+@article{hevner2004design,
+  author  = {Hevner, Alan R. and March, Salvatore T. and Park, Jinsoo and Ram, Sudha},
+  title   = {Design Science in Information Systems Research},
+  journal = {MIS Quarterly},
+  volume  = {28},
+  number  = {1},
+  pages   = {75--105},
+  year    = {2004},
+  url     = {https://aisel.aisnet.org/misq/vol28/iss1/6/}
+}
+
+@article{peffers2007design,
+  author  = {Peffers, Ken and Tuunanen, Tuure and Rothenberger, Marcus A. and Chatterjee, Samir},
+  title   = {A Design Science Research Methodology for Information Systems Research},
+  journal = {Journal of Management Information Systems},
+  volume  = {24},
+  number  = {3},
+  pages   = {45--77},
+  year    = {2007},
+  doi     = {10.2753/MIS0742-1222240302}
+}
+
+@article{dbrc2003design,
+  author  = {{The Design-Based Research Collective}},
+  title   = {Design-Based Research: An Emerging Paradigm for Educational Inquiry},
+  journal = {Educational Researcher},
+  volume  = {32},
+  number  = {1},
+  pages   = {5--8},
+  year    = {2003},
+  doi     = {10.3102/0013189X032001005}
+}
+
+@article{wang2005design,
+  author  = {Wang, Feng and Hannafin, Michael J.},
+  title   = {Design-based research and technology-enhanced learning environments},
+  journal = {Educational Technology Research and Development},
+  volume  = {53},
+  number  = {4},
+  pages   = {5--23},
+  year    = {2005},
+  doi     = {10.1007/BF02504682}
+}
+
+@online{schwaber2020scrum,
+  author  = {Schwaber, Ken and Sutherland, Jeff},
+  title   = {The Scrum Guide},
+  date    = {2020-11},
+  url     = {https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf},
+  urldate = {2026-10-08}
+}
+
+@manual{iso9241-210-2019,
+  author       = {{International Organization for Standardization}},
+  title        = {{ISO} 9241-210:2019 Ergonomics of human-system interaction -- Part 210: Human-centred design for interactive systems},
+  organization = {ISO},
+  address      = {Geneva},
+  year         = {2019},
+  url          = {https://www.iso.org/standard/77520.html}
+}
+
+@inproceedings{bezemer2010multitenant,
+  author    = {Bezemer, C. and Zaidman, A. E.},
+  title     = {Multi-tenant {SaaS} applications: maintenance dream or nightmare?},
+  booktitle = {Proceedings of the Joint ERCIM Workshop on Software Evolution (EVOL) and International Workshop on Principles of Software Evolution (IWPSE)},
+  publisher = {ACM},
+  pages     = {88--92},
+  year      = {2010}
+}
+
+% UNVERIFIED (institución editora): hallado solo en listado de descargas de Ateneo de Manila.
+% Nombre de pila de Rodrigo no confirmado: solo apellido.
+@manual{ocumpaugh2015bromp,
+  author  = {Ocumpaugh, Jaclyn and Baker, Ryan S. and Rodrigo},
+  title   = {{Baker Rodrigo Ocumpaugh Monitoring Protocol (BROMP)} 2.0 Technical and Training Manual},
+  edition = {v1.0},
+  date    = {2015-02-28},
+  url     = {https://alls.ateneo.edu/?p=4270}
 }

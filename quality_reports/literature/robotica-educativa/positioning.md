@@ -1,77 +1,133 @@
-# Posicionamiento — Aporte de la tesis y tabla comparativa de herramientas
+# Posicionamiento — Aporte de la tesis, tabla comparativa y marco para los retos
 
-**Proyecto:** robotica-educativa · **Fase:** Discovery · **Fecha:** 2026-10-08
+**Proyecto:** robotica-educativa · **Fase:** Discovery · **Ronda 2** · **Fecha:** 2026-10-08
+
+**Las cinco piezas:**
+
+| Pieza | Descripción |
+|-------|-------------|
+| **P1** | Simulador web |
+| **P2** | Programación por bloques con vista de código |
+| **P3** | Robot real de bajo costo compartido por turnos |
+| **P4** | Analítica y panel docente |
+| **P5** | Gestión multi-colegio |
 
 ---
 
 ## 1. Propuesta de enunciado del aporte (borrador para el asesor)
 
-> La literatura muestra que los simuladores web reducen la dependencia de los kits (Tselegkaridis y Sapounidis, 2021; Berland y Wilensky, 2015), que la programación por bloques con vista de código facilita el inicio sin perjudicar el paso a texto (Weintrop y Wilensky, 2017, 2019) y que es viable programar microcontroladores ESP32 de bajo costo desde el navegador con MicroPython (da Silva Junior et al., 2020). Sin embargo, estas piezas aparecen por separado. Las plataformas existentes (Open Roberta, VEXcode VR, Kibotics, MetaRoboLearn) no combinan simulador, robot real de bajo costo compartido por turnos, analítica para el docente y gestión de varios colegios. Además, casi no se mide cuántos programas probados en el simulador funcionan sin cambios en el robot real, ni cuánto tiempo practica cada estudiante cuando hay pocos kits.
+> La literatura muestra varias cosas por separado:
+> - los simuladores web reducen la dependencia de los kits (Tselegkaridis y Sapounidis, 2021; Berland y Wilensky, 2015);
+> - la programación por bloques con vista de código facilita el inicio sin perjudicar el paso a texto (Weintrop y Wilensky, 2017, 2019);
+> - es viable programar microcontroladores ESP32 de bajo costo desde el navegador con MicroPython (da Silva Junior et al., 2020);
+> - la analítica en tiempo real para el docente puede mejorar el aprendizaje (Holstein et al., 2018).
 >
-> Esta tesis desarrolla y valida, en un colegio privado de Panamá, una plataforma web que **integra** esas cuatro piezas. Aporta **evidencia empírica de tres cosas**: la tasa de transferencia simulador→robot ESP32 (H3), el tiempo de práctica por estudiante en una clase de unos 30 estudiantes con 2 robots (H1) y la reducción del tiempo de evaluación docente gracias al panel (H4). Es el primer estudio de este tipo documentado en el contexto panameño.
+> Sin embargo, en la búsqueda realizada no se encontró ninguna herramienta que reúna las cinco piezas. Tampoco se encontraron estudios que midan, en robótica escolar, cuántos programas probados en el simulador funcionan sin cambios en el robot real, ni cuánto practica cada estudiante cuando hay pocos kits.
+>
+> Esta tesis desarrolla, con un enfoque de investigación en ciencia del diseño (Hevner et al., 2004; Peffers et al., 2007), una plataforma web que integra las cinco piezas y la valida en un colegio privado de Panamá. Mide cuatro cosas:
+> - el tiempo de práctica por estudiante (H1);
+> - la usabilidad con el SUS en español (H2);
+> - la tasa de transferencia simulador→robot ESP32 (H3);
+> - el tiempo de evaluación docente (H4).
+>
+> En la búsqueda realizada no se encontraron estudios previos de este tipo en el contexto panameño.
 
-**Versión corta (para el resumen):**
-> Plataforma web que une simulador 2D, programación por bloques con vista Python, robots ESP32 de bajo costo compartidos por turnos y un panel docente multi-colegio. Se valida en Panamá midiendo el tiempo de práctica, la usabilidad (SUS), la transferencia simulador→robot y el tiempo de evaluación.
+**Versión corta (resumen):**
+> Plataforma web que integra un simulador 2D, programación por bloques con vista Python, robots ESP32 de bajo costo compartidos por turnos y un panel docente multi-colegio. Se valida en Panamá midiendo el tiempo de práctica, la usabilidad (SUS), la transferencia simulador→robot y el tiempo de evaluación.
 
 ---
 
-## 2. Tres ejes de diferenciación
+## 2. Ejes de diferenciación
 
 | Eje | Frente a quién | Diferencia defendible |
 |-----|---------------|----------------------|
-| **D1. Integración "simulador → robot de bajo costo compartido"** | Open Roberta, VEXcode VR, Kibotics, MetaRoboLearn, Ángel-Díaz et al. (2020) | Ellos usan robots comerciales (EV3, mBot, VEX, ROS2) o no tienen robot real. La tesis usa ESP32 + MicroPython con un intérprete JSON estándar (patrón adaptador) y una **cola de turnos** para 2 robots y 30 estudiantes, en la línea de Mendieta (Zabala et al., 2021) pero con simulador previo. |
-| **D2. Analítica docente en tiempo útil** | Scaradozzi et al. (2020); Diana et al. (2017); Dr. Scratch | Scaradozzi analiza los logs a posteriori. Diana y Grover trabajan en Alice. Dr. Scratch hace análisis estático. La tesis registra intentos, errores y tiempo por reto, en simulador y robot, y los muestra al docente con exportación a Excel. |
-| **D3. Contexto y escala** | Todas | Multi-colegio (`colegio_id`), en español, con un modelo de negocio para colegios privados de Panamá. Es la primera validación con usuarios en ese contexto (antecedentes nacionales: Moreno et al., 2012, descriptivo; Candanedo Yau, 2026, universitario). |
+| **D1. P1→P3: simulador con transferencia a un robot de bajo costo compartido** | Open Roberta, VEXcode VR, Kibotics, MetaRoboLearn, MakeCode, Ángel-Díaz et al. | Ellos usan robots comerciales o ROS2, la placa sin robot, o no tienen robot real. La tesis usa ESP32 + MicroPython con la **misma API JSON** en simulador y firmware (como Kibotics y Thymio/Webots), más una **cola de turnos** (como Mendieta y Garcia-Costa). Además, **diseña el simulador para la transferencia** (ruido y calibración, §4 de `frontier_map.md`) y **mide** esa transferencia. |
+| **D2. P4: analítica docente en tiempo útil, en robótica** | Scaradozzi/Cesaretti; Diana; iSnap; Dr. Scratch; Lumilo | La analítica de robótica existente es a posteriori. La de tiempo real existe en matemáticas (Lumilo) o en bloques sin robot (iSnap, Diana). La tesis la lleva a retos de robótica, con datos del simulador y del robot. |
+| **D3. P5 y contexto** | Todas | Multi-colegio (`colegio_id`, patrón SaaS multi-inquilino; Bezemer y Zaidman, 2010), en español, con modelo de negocio. **No se encontraron en la búsqueda realizada** validaciones con usuarios en colegios panameños. |
 
 **Lo que la tesis NO debe reclamar:**
-- Que mejora el pensamiento computacional: la evidencia es mixta (Ouyang y Xu, 2024, g = 0,079, no significativo) y el diseño antes/después con un solo grupo no permite atribuir causalidad.
-- Ser "la primera plataforma con simulador y bloques": Open Roberta (2014), Kibotics y el simulador de La Laguna (2020) ya lo son.
-- Ser "la primera en programar ESP32 con bloques desde el navegador": BIPES (2020) ya lo hace.
+- Que mejora el pensamiento computacional (Ouyang y Xu, 2024: g = 0,079, no significativo; además, el diseño tiene un solo grupo).
+- Ser la primera plataforma con simulador y bloques (Open Roberta 2014, Kibotics, ULL 2020).
+- Ser la primera en programar ESP32 con bloques desde el navegador (BIPES 2020).
+- Ser "el primer estudio" de algo. Usar siempre: "no se encontró en la búsqueda realizada".
 
 ---
 
-## 3. Tabla comparativa de herramientas (estado del arte)
+## 3. Tabla comparativa de herramientas
 
-**Leyenda:** Sí · Parcial · No · **?** = no verificado (revisar el sitio oficial antes de la defensa). Las columnas siguen el pedido del usuario.
+**Leyenda:** Sí · Parcial · No · **?** = no verificado (revisar el sitio oficial antes de la defensa).
 
-| Herramienta | Simulador | Bloques | Vista de código | Robot real | Robot de bajo costo | Analítica docente | Multi-colegio | Español | Precio |
-|-------------|-----------|---------|-----------------|------------|---------------------|-------------------|---------------|---------|--------|
-| **Scratch 3** (Resnick et al., 2009) | No (escenario 2D de objetos, no robot) | Sí | No | Parcial (extensiones: micro:bit, LEGO) | Parcial (micro:bit) | No (solo gestión de clase) **?** | No | Sí | Gratis |
-| **mBlock 5** (Makeblock) | No | Sí | Sí (Python / Arduino C) | Sí (mBot, CyberPi, Arduino) | Parcial (Arduino; ESP32 **?**) | No **?** | No | Sí **?** | Software gratis; hardware de pago |
-| **MakeCode** (Ball et al., 2019) | Parcial (simula la placa, no un robot en pista) | Sí | Sí (JavaScript/TypeScript, Python) | Sí (micro:bit y otras placas) | Sí (micro:bit) | No **?** | No | Sí **?** | Gratis |
-| **Open Roberta Lab** (Jost et al., 2014) | Sí (2D; para EV3, NXT, Calliope, micro:bit según fuente de 2019) | Sí (NEPO / Blockly) | Sí (código generado) | Sí (≈10 plugins: EV3, micro:bit, mBot, Arduino…) | Parcial (Arduino, micro:bit; ESP32 **?**) | No **?** | No | Sí **?** | Gratis |
-| **VEXcode VR** (Sirinterlikci et al., 2022) | Sí (3D) | Sí | Sí (Python, "Switch") | No (solo virtual; el robot real usa otra app VEXcode) | No | Parcial (panel de licencias y clases en versión Premium) | No (licencia por docente) | **?** | Básico gratis; Enhanced USD 199 y Premium USD 499 por docente al año |
-| **Tinkercad Circuits** (Autodesk) | Sí (circuitos Arduino / micro:bit) | Sí (Codeblocks) | Sí (C++) | Parcial (exporta código; no carga directa) | Sí (Arduino) | Parcial (Tinkercad Classrooms) **?** | No | Sí | Gratis |
-| **Kibotics** (Álvarez Martín, 2020; URJC) | Sí (3D en navegador) | Sí (Blockly / Scratch) | Sí (Python) | Sí (mBot, EV3, Tello) | Parcial (mBot) | Parcial (evaluadores automáticos de ejercicios) | **?** | Sí | **?** |
-| **BIPES** (da Silva Junior et al., 2020) | No | Sí (Blockly) | Sí (MicroPython) | Sí (ESP32, ESP8266, micro:bit…) | Sí | No (tiene panel IoT de datos, no docente) | No | **?** | Gratis, código abierto |
-| **Simulador ULL** (Ángel-Díaz et al., 2020) | Sí | Sí | **?** | No | No aplica | **?** | No | Sí | Gratis |
-| **MetaRoboLearn** (Terzic et al., 2025) | Sí (3D, herramienta Python) | Sí (herramienta Blockly) | Sí (Python) | Sí (ROS2) | **?** (ROS2 suele ser más costoso) | **?** | **?** | **?** | **?** |
-| **Mendieta** (Zabala et al., 2021) | No | **?** | **?** | Sí (1 robot por escuela, cola multiusuario) | Sí (menos de USD 180) | No | No | Sí (Argentina) | Abierto |
-| **ESTA TESIS** (propuesta) | Sí (2D Canvas, sensores de distancia y línea) | Sí (Blockly) | Sí (Python) | Sí (ESP32 vía Web Serial; WiFi = SHOULD) | Sí (ESP32 + MicroPython) | Sí (intentos, errores, tiempo, notas, Excel) | Sí (`colegio_id`) | Sí | Por definir (modelo de negocio, objetivo 6) |
+| Herramienta | Simulador (P1) | Bloques (P2) | Vista de código (P2) | Robot real | Robot de bajo costo (P3) | Turnos/cola (P3) | Analítica docente (P4) | Multi-colegio (P5) | Español | Precio |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **Scratch 3** | No (escenario 2D, no robot) | Sí | No | Parcial (extensiones) | Parcial (micro:bit) | No | No **?** | No | Sí | Gratis |
+| **mBlock 5** | No | Sí | Sí (Python/Arduino C) | Sí (mBot, CyberPi, Arduino) | Parcial (ESP32 **?**) | No | No **?** | No | Sí **?** | Software gratis; hardware de pago |
+| **MakeCode** (Ball et al., 2019) | Parcial (placa) | Sí | Sí (JS/TS, Python) | Sí (micro:bit…) | Sí | No | No **?** | No | Sí **?** | Gratis |
+| **Open Roberta Lab** (Jost et al., 2014) | Sí (2D) | Sí (NEPO) | Sí | Sí (≈10 plugins) | Parcial (ESP32 **?**) | No | No **?** | No | Sí **?** | Gratis |
+| **VEXcode VR** | Sí (3D) | Sí | Sí (Python) | No (otra app) | No | No | Parcial (panel de licencias Premium) | No (licencia por docente) | **?** | Básico gratis; Enhanced USD 199 y Premium USD 499 por docente al año |
+| **Tinkercad Circuits** | Sí (circuitos) | Sí | Sí (C++) | Parcial | Sí (Arduino) | No | Parcial (Classrooms) **?** | No | Sí | Gratis |
+| **Kibotics** (URJC) | Sí (3D) | Sí | Sí (Python) | Sí (mBot, EV3, Tello) | Parcial | No | Parcial (evaluadores automáticos) | **?** | Sí | **?** |
+| **Thymio + Aseba/VPL** (Mondada et al., 2017) | Parcial (modelo en Webots) | Sí (VPL, Blockly, Scratch) | Sí (Aseba) | Sí (Thymio) | Parcial (robot propio, abierto) | No | No **?** | No | **?** | Software gratis; robot de pago |
+| **BIPES** (2020) | No | Sí | Sí (MicroPython) | Sí (ESP32…) | Sí | No | No | No | **?** | Gratis, abierto |
+| **Simulador ULL** (Ángel-Díaz et al., 2020) | Sí | Sí | **?** | No | No aplica | No | **?** | No | Sí | Gratis |
+| **MetaRoboLearn** (2025) | Sí (3D) | Sí | Sí (Python) | Sí (ROS2) | **?** | **?** | **?** | **?** | **?** | **?** |
+| **Mendieta** (Zabala et al., 2021) | No | **?** | **?** | Sí | Sí (<USD 180) | **Sí (cola multiusuario)** | No | No | Sí | Abierto |
+| **Garcia-Costa et al.** (2020) | No | Sí | Parcial | Sí | **?** | **Sí (cola de ejecución)** | No | No | **?** | **?** |
+| **ESTA TESIS** | Sí (2D, con ruido y calibración) | Sí (Blockly) | Sí (Python) | Sí (ESP32) | Sí | Sí | Sí | Sí | Sí | Por definir (objetivo 6) |
 
-**Notas sobre la tabla:**
-1. Los datos de VEXcode VR (precios y panel Premium) se verificaron en vexrobotics.com mediante la búsqueda (2026-10). Los demás datos de productos comerciales vienen de conocimiento general o de páginas antiguas (por ejemplo, Google Code-in 2019 para Open Roberta) y están marcados con **?** cuando no se confirmaron.
-2. Antes de presentar la tabla al jurado, verificar en cada sitio oficial: soporte de ESP32 en Open Roberta y mBlock, idioma español en VEXcode VR y BIPES, y funciones de analítica en MakeCode, Scratch y Tinkercad Classrooms.
-3. Conviene añadir una columna "Gestión de turnos o cola para robots compartidos". Solo la tienen Mendieta, los laboratorios remotos (Garcia-Costa et al., 2020; RoboBlock) y esta tesis. Es el diferenciador más claro frente al problema de "pocos kits".
+**Notas:**
+1. Los precios y el panel de VEXcode VR se verificaron en vexrobotics.com. Las demás celdas con **?** deben confirmarse en los sitios oficiales.
+2. La columna "Turnos/cola" es el diferenciador más directo frente al problema de pocos kits. Solo Mendieta, los laboratorios remotos y esta tesis la cubren.
+3. Sobre el ESP32: el Arduino UNO R4 WiFi (2023) ya incluye un módulo ESP32-S3. Esto refuerza la elección del ESP32 por conectividad, no por obsolescencia de Arduino.
 
 ---
 
 ## 4. Literaturas en las que se inserta la tesis
 
 | Literatura | Pregunta típica | Aporte de la tesis | Cita ancla |
-|-----------|-----------------|--------------------|-----------|
-| Robótica educativa (efectos) | ¿La robótica mejora el aprendizaje? | No responde esto directamente. Se usa como motivación | Benitti (2012); Ouyang y Xu (2024) |
-| Simuladores y "sim-to-real" educativo | ¿Sustituye el simulador al robot? ¿Se transfieren los programas? | Mide la tasa de transferencia (H3) y el tiempo de práctica (H1) | Berland y Wilensky (2015); Tselegkaridis y Sapounidis (2021); Terzic et al. (2025) |
-| Learning analytics y paneles | ¿Qué datos ayudan al docente? | Panel docente para robótica con datos del simulador y del robot, evaluado con un docente real (H4) | Schwendimann et al. (2017); Scaradozzi et al. (2020) |
-| Robots de bajo costo y herramientas web | ¿Cómo bajar costos y barreras de instalación? | ESP32 + MicroPython + Web Serial integrado a retos | da Silva Junior et al. (2020); Zabala et al. (2021) |
-| Contexto Panamá y Latinoamérica | ¿Qué pasa en la región? | Primera validación con usuarios en un colegio panameño | Moreno et al. (2012); Mesa Pinto (2026) |
+|---|---|---|---|
+| Robótica educativa (efectos) | ¿Mejora el aprendizaje? | Motivación; no lo mide directamente | Benitti (2012); Ouyang y Xu (2024) |
+| Pensamiento computacional | ¿Cómo se describe y evalúa? | Clasificación de retos y diseño de indicadores | Brennan y Resnick (2012); Román-González et al. (2017) |
+| Simuladores y sim-to-real | ¿Se transfieren los programas? | Mide la tasa de transferencia (H3) y diseña el simulador para lograrla | Jakobi et al. (1995); Berland y Wilensky (2015); Ztoupas et al. (2026) |
+| Learning analytics | ¿Qué datos ayudan al docente? | Panel de robótica en tiempo útil (H4) | Holstein et al. (2018); Schwendimann et al. (2017); Verbert et al. (2013) |
+| Bajo costo y web | ¿Cómo bajar costos y barreras? | ESP32 + MicroPython + Web Serial + cola | BIPES (2020); Zabala et al. (2021) |
+| Metodología (DSR/DBR) | ¿Cómo se valida un artefacto educativo? | Artefacto + evaluación en aula real | Hevner et al. (2004); Peffers et al. (2007); DBRC (2003) |
+| Panamá y Latinoamérica | ¿Qué pasa en la región? | Evidencia con usuarios en Panamá | Moreno et al. (2012); Cobre Panamá (2023); Castro Rojas y Acuña Zúñiga (2012) |
 
 ---
 
-## 5. Recomendaciones para la Estrategia (sin proponer un diseño de evaluación)
+## 5. Qué marco usar para clasificar los retos por nivel
 
-Son observaciones de la literatura que el strategist puede usar; no son decisiones metodológicas.
-- La literatura de simuladores reporta muestras pequeñas e intervenciones cortas (Ztoupas et al., 2026, UNVERIFIED venue). El jurado puede plantear la misma crítica: conviene reconocerlo como limitación.
-- La línea base de SUS de 68 viene de la literatura de Sauro y Lewis. Conviene confirmar la cita exacta en Lewis (2018) antes de usarla. Bangor et al. (2009) permiten traducir la puntuación a adjetivos.
-- La adaptación de SUS a menores (Putnam et al., 2020) sugiere pilotar la redacción en español con 2 o 3 estudiantes.
-- Para H3 no se encontró ningún protocolo estándar de "tasa de transferencia". La tesis tendría que definirlo (por ejemplo, reto superado en el robot al primer intento sin cambiar código).
+**Recomendación: Brennan y Resnick (2012) como eje principal, con la progresión de dificultad del CTt (Román-González et al., 2017) y las facetas de Shute et al. (2017) para los indicadores del panel.**
+
+**Por qué Brennan y Resnick:**
+- Su dimensión de **conceptos computacionales** viene de un entorno de bloques (Scratch) y se corresponde directamente con bloques de Blockly.
+- Es el marco más citado en programación por bloques.
+- Sus otras dos dimensiones (prácticas y perspectivas) recuerdan que los logs no capturan todo, lo cual sirve como limitación declarada.
+
+**Por qué el CTt para graduar la dificultad:**
+- Está validado en español con estudiantes de 10 a 16 años (5.º a 10.º grado), el rango de la tesis.
+- Su progresión de conceptos sirve de guía para ordenar niveles. **Verificar en el texto del CTt la lista exacta y el orden de sus conceptos** antes de citarla; no se leyó el texto completo.
+
+**Propuesta de niveles (borrador para el strategist y el writer; no es un resultado de la literatura):**
+
+| Nivel | Concepto dominante (Brennan y Resnick / CTt) | Ejemplo de reto en el simulador 2D | Indicador del panel (Shute) |
+|---|---|---|---|
+| 1 | Secuencias | Llevar el robot a la meta con avanzar y girar | Intentos hasta lograrlo (depuración) |
+| 2 | Bucles de "repetir N veces" | Dibujar un cuadrado o recorrer un pasillo con repetición | Longitud del programa frente a la solución mínima (abstracción) |
+| 3 | Condicionales (si / si-no) con sensor de distancia | Detenerse ante un obstáculo | Errores de lógica detectados (depuración) |
+| 4 | Bucles condicionales ("mientras") + sensores | Seguir una línea | Iteraciones de prueba y error (iteración) |
+| 5 | Funciones o descomposición | Recorrido con subrutinas reutilizables | Uso de funciones (descomposición y generalización) |
+| 6 | Transferencia | Repetir los retos 3–4 en el robot ESP32 real | Pasa o no al primer intento (H3) |
+
+Las **prácticas** (depurar, iterar) se aproximan con los logs. Las **perspectivas** quedan fuera del alcance y se declaran como limitación.
+
+---
+
+## 6. Metodología: cómo encaja el eje 9
+
+- **Marco general:** investigación en ciencia del diseño. La plataforma es el artefacto; las seis actividades de Peffers et al. (2007) estructuran los capítulos (problema → objetivos → diseño → demostración → evaluación → comunicación) y corresponden a los objetivos específicos 1 a 5.
+- **Puente con la educación:** la investigación basada en diseño (DBRC, 2003; Wang y Hannafin, 2005) justifica validar en un aula real y con iteración (piloto → ajuste).
+- **Proceso de desarrollo:** Scrum (Schwaber y Sutherland, 2020) con diseño centrado en el usuario (ISO 9241-210:2019).
+- **Arquitectura:** SaaS multi-inquilino con esquema compartido y `colegio_id` (Bezemer y Zaidman, 2010).
+- **Medición de H1:** observación por muestreo momentáneo inspirada en BROMP (Ocumpaugh et al., 2015). Por ejemplo, rondas cada N minutos codificando a cada estudiante como "practicando / esperando turno / fuera de tarea", antes y después.
+- **Medición de H2:** SUS en español (Sevilla-Gonzalez et al., 2020, α = 0,812), interpretado con el promedio de 68 (Sauro, 2011; Sauro y Lewis, 2016) y la escala de adjetivos (Bangor et al., 2009). Reportar el α de la propia muestra.
