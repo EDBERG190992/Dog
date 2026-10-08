@@ -25,7 +25,7 @@ En los colegios privados de Panamá hay pocos kits de robótica para muchos estu
 
 ## 2. Motivación
 
-- MEDUCA reporta >1,300 docentes formados en STEAM y >1,000 clubes de robótica (2023). La formación existe; los **kits por estudiante** siguen siendo escasos (ej.: 80 kits para 61 escuelas en Colón).
+- MEDUCA reporta >1,300 docentes formados en STEAM y >1,000 clubes de robótica (2023). La formación existe; los **kits por estudiante** siguen siendo escasos (ej.: programa Cobre Panamá–FUNDESTEAM en 61 escuelas de Colón; cifra exacta de kits por verificar).
 - El docente evalúa a 30 estudiantes a mano, sin datos.
 - Herramientas existentes (Scratch, mBlock, MakeCode, Open Roberta, VEXcode VR) no combinan: simulador + robot real por turnos + analítica docente + multi-colegio, en español y para Panamá.
 
@@ -101,12 +101,12 @@ Primera plataforma (según la búsqueda inicial) que integra **simulador + robot
 
 ## 9. Antecedentes clave
 
-- UTP y Universidad de Salamanca (2012), robótica educativa en 6 colegios de Chiriquí.
-- Universidad de Murcia: simulador web de robótica educativa con bloques (DOI 10.6018/red.410191).
+- Moreno et al. (2012), autores de la UTP, revista *TESI* (Univ. de Salamanca): robótica educativa en 6 colegios de Chiriquí.
+- Ángel-Díaz et al. (2020), Universidad de La Laguna, revista RED: simulador web con bloques, sin robot real (DOI 10.6018/red.410191).
 - Kibotics, Universidad Rey Juan Carlos (TFG, 2019): simulador de robots en el navegador.
 - MetaRoboLearn, ICCE 2025: bloques vs. Python con simulador.
-- Estudio en Perú (Redalyc): el 74% de los docentes no conocía la robótica educativa.
-- Pendiente: `/discover lit` para la revisión completa.
+- Estudio en Perú (Redalyc): el 74% de 35 docentes de una universidad no sabe aplicar la robótica educativa.
+- Revisión completa: `quality_reports/literature/robotica-educativa/`.
 
 ## 10. Cronograma (12 meses)
 
